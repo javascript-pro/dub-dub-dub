@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
+import {Uberedux} from "../ui/Uberedux";
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -13,7 +15,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Dub Dub Dub",
-  description: "A modern monorepo solution with Next.js, Turborepo, and powerful modular features.",
+  description: "Goldlabel. with Turborepo & Next.js &",
 };
 
 export default function RootLayout({
@@ -23,8 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <Uberedux>
+          {children}
+        </Uberedux>\
       </body>
     </html>
   );

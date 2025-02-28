@@ -28,19 +28,25 @@
 /* Dark Mode Adjustments */
 @media (prefers-color-scheme: dark) {
   .header {
-    background: rgba(255, 255, 255, 0.08); /* Slightly lighter than full black */
+    background: rgba(255, 255, 255, 0.08);
   }
   .feature {
-    background: rgba(255, 255, 255, 0.06); /* Slightly lighter than dark background */
+    background: rgba(255, 255, 255, 0.06);
+  }
+  .hero {
+    background: rgba(255, 255, 255, 0.08);
   }
 }
 
 @media (prefers-color-scheme: light) {
   .header {
-    background: rgba(0, 0, 0, 0.05); /* Slightly darker than full white */
+    background: rgba(0, 0, 0, 0.05);
   }
   .feature {
-    background: rgba(0, 0, 0, 0.03); /* Slightly darker than light background */
+    background: rgba(0, 0, 0, 0.03);
+  }
+  .hero {
+    background: rgba(0, 0, 0, 0.05);
   }
 }
 
@@ -53,6 +59,8 @@
 /* Navigation */
 .nav {
   margin-left: auto;
+  display: flex;
+  gap: 1rem; /* Adds spacing between buttons */
 }
 
 .navLink {
@@ -64,13 +72,21 @@
 /* Hero Section */
 .hero {
   text-align: center;
-  margin-top: 40px;
+  margin: 10px;
+  padding: 10px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.25);
+  /* border: 1px solid #C09F52; */
+  color: white; /* Ensures good contrast */
+  border-radius: 8px;
 }
 
+/* Call to Action */
 .cta {
   display: flex;
-  gap: 10px;
+  /* gap: 10px; */
   justify-content: center;
+  /* margin-top: 2rem; */
 }
 
 /* Feature Grid */
@@ -115,16 +131,10 @@
   text-align: center;
   padding: 20px;
   background: var(--footer-background);
-  margin-top: auto; /* Pushes footer to the bottom */
+  margin-top: auto;
 }
 
-.cta {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
+/* Buttons */
 .button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -137,25 +147,25 @@
 }
 
 .primary {
-  background-color: #007bff;
+  background-color: #C09F52;
   color: white;
-  border: 2px solid #007bff;
+  border: 2px solid #C09F52;
 }
 
 .primary:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
+  background-color: #A88948;
+  border-color: #A88948;
   transform: scale(1.05);
 }
 
 .secondary {
   background-color: white;
-  color: #007bff;
-  border: 2px solid #007bff;
+  color: #C09F52;
+  border: 2px solid #C09F52;
 }
 
 .secondary:hover {
-  background-color: #007bff;
+  background-color: #C09F52;
   color: white;
   transform: scale(1.05);
 }
