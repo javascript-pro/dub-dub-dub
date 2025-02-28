@@ -35,6 +35,7 @@ export default function RootLayout({
         <meta name="theme-color" content={config.themeColor} />
         <meta property="og:site_name" content={config.title} />
         <meta property="og:title" content={config.title} />
+        <meta property="og:url" content={config.url} />
         <meta property="og:description" content={config.description} />
         <meta property="og:image" content={config.ogImage} />
         <meta name="twitter:card" content="summary_large_image" />
