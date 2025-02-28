@@ -67,7 +67,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className={styles.footer}>
-        <p>© {new Date().getFullYear()} Goldlabel Apps</p>
+        <p>© {new Date().getFullYear()} Goldlabel</p>
       </footer>
     </div>
   );
