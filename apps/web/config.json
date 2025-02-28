@@ -1,22 +1,23 @@
 {
     "title": "Dub Dub Dub",
     "url": "https://goldlabel.pro",
-    "description": "Documentation is important",
+    "description": "Goldlabel Instructions",
     "favicon": "/svg/favicon.svg",
     "ogImage": "/jpg/opengraph.jpg",
-    "themeColor": "#219B02",
+    "themeColor": "#C09F52",
     "themes": {
         "light": {
-            "primary": "#219B02",
-            "secondary": "#32ba69",
-            "text": "#283d30",
-            "background": "#d6f2e0"
+            "primary": "#C09F52",
+            "secondary": "#A88948",
+            "text": "#2D2D2D",
+            "background": "#FAF7F2"
         },
         "dark": {
-            "primary": "#219B02",
-            "secondary": "#00ff66",
-            "text": "#d6f2e0",
-            "background": "#283d30"
+            "primary": "#C09F52",
+            "secondary": "#A88948",
+            "text": "#FAF7F2",
+            "background": "#2D2D2D"
         }
     }
+
 }

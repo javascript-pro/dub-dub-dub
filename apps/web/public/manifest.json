@@ -1,8 +1,8 @@
 {
     "short_name": "Dub Dub Dub",
     "name": "Dub Dub Dub",
-    "theme_color": "#219B02",
-    "background_color": "#219B02",
+    "theme_color": "#C09F52",
+    "background_color": "#C09F52",
     "display": "fullscreen",
     "orientation": "portrait",
     "scope": "/",

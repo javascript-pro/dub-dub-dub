@@ -16,7 +16,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Dub Dub Dub",
-  description: "Goldlabel. with Turborepo & Next.js &",
+  description: "Goldlabel Instructions",
 };
 
 export default function RootLayout({
