@@ -34,9 +34,16 @@ export default function Home() {
       <main>
         
         <div className={styles.hero}>
-          <h3>
+          <h1>
             Goldlabel Turborepo with Next.js
-          </h3>
+          </h1>
+          <p>The term "dub dub dub" was most commonly used between the late 1990s and early 2010s.
+
+1995–2005: This was the peak era when people regularly said "double-u double-u double-u" out loud because web addresses were still a new concept, and most sites used www as a standard prefix. Tech-savvy people, especially developers and IT workers, started using "dub dub dub" as a faster, more casual way to say it.
+
+2005–2010: The usage was still around, but browsers started auto-completing URLs, and most people stopped verbally mentioning "www" when talking about websites.
+
+2010s–Present: Saying "dub dub dub" became mostly a nostalgic or inside joke among older developers and internet veterans. Modern browsers, search engines, and mobile devices rarely require typing www at all.</p>
           <div className={styles.cta}>
             <a 
               href="https://github.com/javascript-pro/dub-dub-dub"
