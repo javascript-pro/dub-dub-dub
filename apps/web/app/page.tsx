@@ -19,9 +19,10 @@ export default function Home() {
         </a>
 
         <nav className={styles.nav}>
-          <a
+
+          <a 
             href="https://github.com/javascript-pro/dub-dub-dub"
-            className={styles.navLink}
+            className={`${styles.button} ${styles.secondary}`}
             target="_blank"
             rel="noopener noreferrer"
           >
