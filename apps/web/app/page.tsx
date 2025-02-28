@@ -33,11 +33,12 @@ export default function Home() {
       </header>
       <main>
         {/* Hero Section */}
+        <Chapters />
         <div className={styles.hero}>
           
-          <h2>
+          <h3>
             Goldlabel Turborepo with Next.js
-          </h2>
+          </h3>
           <div className={styles.cta}>
             <a 
               href="https://github.com/javascript-pro/dub-dub-dub"
@@ -50,11 +51,8 @@ export default function Home() {
           </div>
         </div>
         
-        <Chapters />
-        
-      
-      
       </main>
+
       {/* Footer */}
       <footer className={styles.footer}>
         <small>by Goldlabel</small>

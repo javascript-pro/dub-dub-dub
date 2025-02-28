@@ -1,10 +1,66 @@
 [
     {
-        "title": "Chapter 1",
-        "subheader": "Subheader 1"
+        "bookId": "dubdubdub",
+        "type": "chapter",
+        "title": "Chapter 1.",
+        "subheader": "Introduction",
+        "slug": "introduction",
+        "outline": "What is a monorepo, and why use one? Overview of the Goldlabel software stack Benefits of SSR in Next.js for PWAs Why a common UI package is essential"
     },
     {
-        "title": "Chapter 2",
-        "subheader": "Subheader 2"
+        "bookId": "dubdubdub",
+        "type": "chapter",
+        "title": "Chapter 2.",
+        "subheader": "Setting Up the Monorepo",
+        "slug": "setting-up-the-monorepo",
+        "outline": "Installing a Next.js-based monorepo with Turborepo Structuring the /apps and /packages folders Adding dependencies and configurations"
+    },
+    {
+        "bookId": "dubdubdub",
+        "type": "chapter",
+        "title": "Chapter 3.",
+        "subheader": "Implementing Server-Side Rendering (SSR)",
+        "slug": "implementing-ssr",
+        "outline": "How SSR works in Next.js Configuring SSR for performance and SEO Handling data fetching with getServerSideProps"
+    },
+    {
+        "bookId": "dubdubdub",
+        "type": "chapter",
+        "title": "Chapter 4.",
+        "subheader": "Creating a PWA with Next.js",
+        "slug": "creating-a-pwa",
+        "outline": "PWA fundamentals and why they matter Configuring Next.js for PWA support Service workers and caching strategies"
+    },
+    {
+        "bookId": "dubdubdub",
+        "type": "chapter",
+        "title": "Chapter 5.",
+        "subheader": "Building a Common UI Package",
+        "slug": "building-a-common-ui-package",
+        "outline": "Why a shared UI package is valuable Setting up a /packages/ui library Using MUI to create reusable components Publishing the package for internal use"
+    },
+    {
+        "bookId": "dubdubdub",
+        "type": "chapter",
+        "title": "Chapter 6.",
+        "subheader": "Integrating the Common UI Across Apps",
+        "slug": "integrating-the-common-ui",
+        "outline": "Consuming the UI package in different apps Theming and customization with MUI Handling versioning and updates"
+    },
+    {
+        "bookId": "dubdubdub",
+        "type": "chapter",
+        "title": "Chapter 7.",
+        "subheader": "Deployment and Optimization",
+        "slug": "deployment-and-optimization",
+        "outline": "Deploying the monorepo with Vercel Optimizing SSR performance for PWAs Monitoring and scaling apps"
+    },
+    {
+        "bookId": "dubdubdub",
+        "type": "chapter",
+        "title": "Chapter 8.",
+        "subheader": "Advanced Topics & Future Enhancements",
+        "slug": "advanced-topics",
+        "outline": "Dynamic routing and API integrations Using Next.js middleware for security and authentication Expanding the monorepo with additional services"
     }
 ]

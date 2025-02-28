@@ -1,6 +1,8 @@
 "use client";
 import React, { ReactNode } from "react";
 import chapterList from "../../ui/Uberedux/data/chapters.json"
+import styles from "../../app/page.module.css";
+
 
 export default function Chapters({ children }: { 
   children?: ReactNode | null,
@@ -8,26 +10,31 @@ export default function Chapters({ children }: {
 
 
   return (
-    <>
-    
-      <h2>Chapters</h2>
-      <pre>
-        {JSON.stringify(chapterList, null, 2)}
-      </pre>
+    <div className={styles.features}>
+      {chapterList.map((item, i) => {
+        const {outline, title, subheader} = item;
+        return <div 
+                key={`item_${i}`} 
+                className={styles.feature}
+                >
+                  <h3>⚡ {subheader}</h3>
+                  <p>{outline}</p>
+              </div>
+      })}
       {children}
-    </>
+    </div>
   );
 }
 
 
 /*
 
-<div className={styles.features}>
+
           {features.map((item: any, i: number) => {
             
           <div className={styles.feature}>
-            <h3>⚡ Super Fast Dev</h3>
-            <p>Leverage Turborepo for lightning-fast builds and efficient caching.</p>
+            
+            
           </div>
             
           return null;
