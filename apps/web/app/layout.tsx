@@ -1,3 +1,4 @@
+import config from "../config.json";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -25,7 +26,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/svg/favicon.svg" type="image/x-icon" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/png/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+        <meta name="theme-color" content={config.themeColor} />
+        <meta property="og:title" content={config.title} />
+        <meta property="og:description" content={config.description} />
+        <meta property="og:image" content={config.ogImage} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content={config.title} />
+        <meta property="twitter:description" content={config.description} />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Uberedux>
           {children}
