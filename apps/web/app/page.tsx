@@ -1,13 +1,23 @@
 import styles from "./page.module.css";
-
+import Image from "next/image";
 export default function Home() {
   return (
     <div className={styles.page}>
       {/* Header with Navbar */}
       <header className={styles.header}>
+        
+
         <a href="/" className={styles.logo}>
-          Dub Dub Dub
+          <Image
+            src="/svg/favicon.svg"
+            alt="Dub Dub Dub Logo"
+            width={40} 
+            height={40}
+            priority
+            className={styles.logoImage}
+          />
         </a>
+
         <nav className={styles.nav}>
           <a
             href="https://github.com/javascript-pro/dub-dub-dub"
@@ -22,8 +32,17 @@ export default function Home() {
 
       {/* Hero Section */}
       <div className={styles.hero}>
-        <h1>Dub Dub Dub</h1>
-        <p>A modern monorepo solution with Next.js, Turborepo, and powerful modular features.</p>
+        <h2>
+          Goldlabel monorepo solution with Next.js & Turborepo
+        </h2>
+        <div className={styles.cta}>
+          <a href="/login" className={`${styles.button} ${styles.primary}`}>
+            Login
+          </a>
+          <a href="/signup" className={`${styles.button} ${styles.secondary}`}>
+            Signup
+          </a>
+        </div>
       </div>
 
       {/* Features Section */}
