@@ -3835,6 +3835,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
+    next: "npm:^15.1.6"
     prettier: "npm:^3.5.0"
     turbo: "npm:^2.4.4"
     typescript: "npm:5.7.3"

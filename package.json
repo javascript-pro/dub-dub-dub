@@ -8,12 +8,13 @@
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
+    "next": "^15.1.6",
     "prettier": "^3.5.0",
     "turbo": "^2.4.4",
     "typescript": "5.7.3"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
   "packageManager": "yarn@4.3.1",
   "workspaces": [
