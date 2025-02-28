@@ -46,7 +46,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Uberedux>
           {children}
-        </Uberedux>\
+        </Uberedux>
       </body>
     </html>
   );

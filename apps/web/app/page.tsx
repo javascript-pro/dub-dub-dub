@@ -32,10 +32,8 @@ export default function Home() {
         </nav>
       </header>
       <main>
-        {/* Hero Section */}
-        <Chapters />
+        
         <div className={styles.hero}>
-          
           <h3>
             Goldlabel Turborepo with Next.js
           </h3>
@@ -50,6 +48,7 @@ export default function Home() {
             </a>
           </div>
         </div>
+        <Chapters />
         
       </main>
 

@@ -1,0 +1,19 @@
+{
+    "short_name": "Dub Dub Dub",
+    "name": "Dub Dub Dub",
+    "theme_color": "#219B02",
+    "background_color": "#219B02",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/",
+    "splash_pages": null,
+    "icons": [
+        {
+            "src": "/png/logo512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

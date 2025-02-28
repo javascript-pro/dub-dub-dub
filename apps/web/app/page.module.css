@@ -74,8 +74,8 @@
   text-align: center;
   margin: 10px;
   padding: 10px;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.25);
+  /* background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25); */
   /* border: 1px solid #C09F52; */
   color: white; /* Ensures good contrast */
   border-radius: 8px;
@@ -100,6 +100,10 @@
 @media (min-width: 1024px) {
   .features {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature {
+    text-align: left; /* Left align text when more than one column */
   }
 }
 
