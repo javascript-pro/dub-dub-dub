@@ -33,7 +33,7 @@ export default function Home() {
       {/* Hero Section */}
       <div className={styles.hero}>
         <h2>
-          Goldlabel monorepo solution with Next.js & Turborepo
+          Goldlabel. with Turborepo & Next.js & 
         </h2>
         <div className={styles.cta}>
           <a href="/login" className={`${styles.button} ${styles.primary}`}>
@@ -63,6 +63,24 @@ export default function Home() {
           <h3>🚀 Deploy Well</h3>
           <p>Integrated with Vercel for seamless deployments and scalability.</p>
         </div>
+
+        <div className={styles.feature}>
+          <h3>⚡ Super Fast Dev</h3>
+          <p>Leverage Turborepo for lightning-fast builds and efficient caching.</p>
+        </div>
+        <div className={styles.feature}>
+          <h3>🛠 Modular & Flexible</h3>
+          <p>Only add the bits you want.</p>
+        </div>
+        <div className={styles.feature}>
+          <h3>🚀 Common UI</h3>
+          <p>Scale easily by using a single set of components.</p>
+        </div>
+        <div className={styles.feature}>
+          <h3>🚀 Deploy Well</h3>
+          <p>Integrated with Vercel for seamless deployments and scalability.</p>
+        </div>
+        
       </div>
 
       {/* Footer */}
