@@ -1,6 +1,8 @@
 import styles from "./page.module.css";
 import Image from "next/image";
-import {Chapters} from "../ui/Chapters"
+import {Chapters} from "../ui/Chapters";
+
+import {Card} from "@repo/ui/card";
 
 export default function Home() {
 
@@ -24,36 +26,37 @@ export default function Home() {
 
         <nav className={styles.nav}>
           <a href="/login" className={`${styles.button} ${styles.primary}`}>
-            Login
+            Sign In
           </a>
-          <a href="/signup" className={`${styles.button} ${styles.secondary}`}>
+          {/* <a href="/signup" className={`${styles.button} ${styles.secondary}`}>
             Signup
-          </a>
+          </a> */}
         </nav>
       </header>
       <main>
         
         <div className={styles.hero}>
           <h1>
-            Goldlabel Turborepo with Next.js
+            
           </h1>
-          <p>The term "dub dub dub" was most commonly used between the late 1990s and early 2010s.
 
-1995–2005: This was the peak era when people regularly said "double-u double-u double-u" out loud because web addresses were still a new concept, and most sites used www as a standard prefix. Tech-savvy people, especially developers and IT workers, started using "dub dub dub" as a faster, more casual way to say it.
+          <Card
+            href="/"
+            title="Dub Dub Dub"
+          >
+            Instructions for the Goldlabel Software Stack
+            Goldlabel provides a structured approach to developing progressive web applications (PWAs) using a monorepo architecture</Card>
+          
+          
+            {/* <ul>
+              <li>Next.js  A React framework for building SSR (Server-Side Rendered) applications</li>
+              <li>Turborepo  A high-performance build system for managing monorepos efficiently</li>
+              <li>MUI (Material UI)  A UI component library for creating consistent, accessible designs</li>
+              <li>Vercel  The preferred deployment platform for Next.js applications.
+              By combining these technologies, we can build fast, scalable, and maintainable applications with minimal setup</li>
+            </ul> */}
 
-2005–2010: The usage was still around, but browsers started auto-completing URLs, and most people stopped verbally mentioning "www" when talking about websites.
-
-2010s–Present: Saying "dub dub dub" became mostly a nostalgic or inside joke among older developers and internet veterans. Modern browsers, search engines, and mobile devices rarely require typing www at all.</p>
-          <div className={styles.cta}>
-            <a 
-              href="https://github.com/javascript-pro/dub-dub-dub"
-              className={`${styles.button} ${styles.primary}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Get the code
-            </a>
-          </div>
+          
         </div>
         <Chapters />
         
@@ -61,7 +64,13 @@ export default function Home() {
 
       {/* Footer */}
       <footer className={styles.footer}>
-        <small>by Goldlabel</small>
+          <a 
+            href="https://github.com/javascript-pro/dub-dub-dub"
+            className={`${styles.button} ${styles.secondary}`}
+            target="_blank"
+            rel="noopener noreferrer">
+            Get the code
+          </a>
       </footer>
     </div>
   );
