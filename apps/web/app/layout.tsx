@@ -33,10 +33,12 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <meta name="theme-color" content={config.themeColor} />
+        <meta property="og:site_name" content={config.title} />
         <meta property="og:title" content={config.title} />
         <meta property="og:description" content={config.description} />
         <meta property="og:image" content={config.ogImage} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:image" content={config.ogImage} />
         <meta property="twitter:title" content={config.title} />
         <meta property="twitter:description" content={config.description} />
       </head>
