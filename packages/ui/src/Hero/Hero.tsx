@@ -21,7 +21,7 @@ export default function ItemCard({
 }) {
 
   return (
-        <Card>
+        <Card sx={{mb:1}}>
           <CardHeader 
             title={title}
             subheader={subheader}

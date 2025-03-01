@@ -3,58 +3,49 @@ import Image from "next/image";
 import Link from "next/link";
 import Hero from "@repo/ui/Hero/Hero";
 import ItemCard from "@repo/ui/ItemCard/ItemCard";
-
+import Appshell from "@repo/ui/Appshell/Appshell";
 import chapterList from "../public/json/chapters.json";
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      
-      <header className={styles.header}>
-        <Link href="/" className={styles.logo}>
-          <Image
-            src="/svg/favicon.svg"
-            alt="Dub Dub Dub"
-            width={50} 
-            height={50}
-            priority
-            className={styles.logoImage}
-          />
-        </Link>
-
-        <nav className={styles.nav}>
-          <Link href="/login" className={`${styles.button} ${styles.primary}`}>
-            Sign In
+  return <Appshell>
+        <header className={styles.header}>
+          <Link href="/" className={styles.logo}>
+            <Image
+              src="/svg/favicon.svg"
+              alt="Dub Dub Dub"
+              width={50} 
+              height={50}
+              priority
+              className={styles.logoImage}
+            />
           </Link>
-        </nav>
-      </header>
+          <nav className={styles.nav}>
+            <Link href="/login" className={`${styles.button} ${styles.primary}`}>
+              Sign In
+            </Link>
+          </nav>
+        </header>
       
-      <main className={styles.main}> 
-        <Hero 
-          icon="home"
-          title="Open Source Code"
-          subheader="Get it on GitHub"
-          imageSrc="/jpg/classroom.jpg"
-        />
-        
-
-        {chapterList.map((item, i) => {
-          const {icon, title, subheader} = item;
-          return <ItemCard 
-                  icon={icon}
-                  title={title}
-                  subheader={subheader}
-                  key={`item_${i}`} 
-                />
-        })}
-
-
-      </main>
-
-      <footer className={styles.footer}>
-        <small>Goldlabel</small>
-      </footer>
-      
-    </div>
-  );
-}
+        <main className={styles.main}>
+            <Hero 
+              icon="share"
+              title="Open Source Code"
+              subheader="Get it on GitHub"
+              imageSrc="/jpg/classroom.jpg"
+            />
+            {chapterList.map((item, i) => {
+              const {icon, title, subheader, slug} = item;
+              return <ItemCard 
+                        icon={icon}
+                        slug={slug}
+                        title={title}
+                        subheader={subheader}
+                        key={`item_${i}`}
+                      />
+            })}
+        </main>
+        <footer className={styles.footer}>
+          <small>Goldlabel</small>
+        </footer>
+      </Appshell>
+};

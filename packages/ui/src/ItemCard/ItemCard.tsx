@@ -11,14 +11,17 @@ export default function ItemCard({
   icon = "home" ,
   title = "Title",
   subheader = "Subheader",
+  slug = "/"
 }: { 
   title: string,
+  slug: string,
   icon?: string,
   subheader?: string,
   imageSrc?: string;
 }) {
 
   const onClick = () => {
+    window.open(slug, "_self");
     return null;
   };
 
