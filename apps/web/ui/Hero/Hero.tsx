@@ -8,7 +8,6 @@ export default function Hero({ children }: {
 
   return (
     <>
-    
       <h2>Hero</h2>
       {children}
     </>

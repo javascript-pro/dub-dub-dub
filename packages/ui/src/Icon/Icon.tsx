@@ -18,7 +18,7 @@ export default function Icon({
   color = "inherit",
 }: { 
   icon: string,
-  color: string,
+  color?: string,
 }) {
   let c: SvgIconProps["color"] = "inherit";
   if (color) c = color as SvgIconProps["color"];
