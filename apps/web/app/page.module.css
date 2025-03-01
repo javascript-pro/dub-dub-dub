@@ -7,6 +7,12 @@
   font-family: var(--font-family);
 }
 
+.main {
+  max-width: 1024px;
+  margin: 0 auto; /* Centers the content */
+  padding: 0 16px; /* Adds some spacing on smaller screens */
+}
+
 /* Container */
 .container {
   max-width: 800px;

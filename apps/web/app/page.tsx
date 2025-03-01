@@ -1,8 +1,8 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import {Chapters} from "../ui/Chapters";
-
 import {Card} from "@repo/ui/card";
+import Icon from "@repo/ui/Icon/Icon";
 
 export default function Home() {
 
@@ -33,33 +33,15 @@ export default function Home() {
           </a> */}
         </nav>
       </header>
-      <main>
-        
+      
+      <main className={styles.main}> 
         <div className={styles.hero}>
           <h1>
-            
+            Dub Dub Dub
           </h1>
-
-          <Card
-            href="/"
-            title="Dub Dub Dub"
-          >
-            Instructions for the Goldlabel Software Stack
-            Goldlabel provides a structured approach to developing progressive web applications (PWAs) using a monorepo architecture</Card>
-          
-          
-            {/* <ul>
-              <li>Next.js  A React framework for building SSR (Server-Side Rendered) applications</li>
-              <li>Turborepo  A high-performance build system for managing monorepos efficiently</li>
-              <li>MUI (Material UI)  A UI component library for creating consistent, accessible designs</li>
-              <li>Vercel  The preferred deployment platform for Next.js applications.
-              By combining these technologies, we can build fast, scalable, and maintainable applications with minimal setup</li>
-            </ul> */}
-
-          
+          <Icon icon="settings" />
         </div>
         <Chapters />
-        
       </main>
 
       {/* Footer */}

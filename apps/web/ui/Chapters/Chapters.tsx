@@ -18,7 +18,7 @@ export default function Chapters({ children }: {
                 className={styles.feature}
                 >
                   <h3>⚡ {subheader}</h3>
-                  <p>{outline}</p>
+                  {/* <p>{outline}</p> */}
               </div>
       })}
       {children}
