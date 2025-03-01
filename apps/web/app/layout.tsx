@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-import {Uberedux} from "../ui/Uberedux";
+import { Uberedux } from "../ui/Uberedux";
+import MuiProvider from "./MuiProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -21,9 +22,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <head>
@@ -44,9 +43,9 @@ export default function RootLayout({
         <meta property="twitter:description" content={config.description} />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Uberedux>
-          {children}
-        </Uberedux>
+        <MuiProvider>
+          <Uberedux>{children}</Uberedux>
+        </MuiProvider>
       </body>
     </html>
   );

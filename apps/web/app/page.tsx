@@ -1,8 +1,9 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import {Chapters} from "../ui/Chapters";
-import {Card} from "@repo/ui/card";
-import Icon from "@repo/ui/Icon/Icon";
+// import Icon from "@repo/ui/Icon/Icon";
+import Hero from "@repo/ui/Hero/Hero";
+
 
 export default function Home() {
 
@@ -35,12 +36,11 @@ export default function Home() {
       </header>
       
       <main className={styles.main}> 
-        <div className={styles.hero}>
-          <h1>
-            Dub Dub Dub
-          </h1>
-          <Icon icon="settings" />
-        </div>
+        <Hero 
+          icon="code"
+          title="dkahsdkh"
+        />
+        
         <Chapters />
       </main>
 
