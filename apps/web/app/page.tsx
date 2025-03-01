@@ -32,8 +32,10 @@ export default function Home() {
       
       <main className={styles.main}> 
         <Hero 
-          icon="code"
-          title="dkahsdkh"
+          icon="home"
+          title="Open Source Code"
+          subheader="Get it on GitHub"
+          imageSrc="/jpg/classroom.jpg"
         />
         <Chapters />
       </main>
