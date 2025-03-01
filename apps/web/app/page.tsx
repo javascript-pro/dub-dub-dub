@@ -1,4 +1,4 @@
-import styles from "./page.module.css";
+import styles from "./theme/page.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { Chapters } from "../ui/Chapters";
@@ -24,9 +24,6 @@ export default function Home() {
           <Link href="/login" className={`${styles.button} ${styles.primary}`}>
             Sign In
           </Link>
-          {/* <Link href="/signup" className={`${styles.button} ${styles.secondary}`}>
-            Signup
-          </Link> */}
         </nav>
       </header>
       
@@ -42,13 +39,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className={styles.footer}>
-        <a 
-          href="https://github.com/javascript-pro/dub-dub-dub"
-          className={`${styles.button} ${styles.secondary}`}
-          target="_blank"
-          rel="noopener noreferrer">
-          Get the code
-        </a>
+        <small>Goldlabel</small>
       </footer>
     </div>
   );

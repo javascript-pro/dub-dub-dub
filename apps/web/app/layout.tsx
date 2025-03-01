@@ -1,18 +1,18 @@
 import config from "../config.json";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import "./theme/globals.css";
 
 import { Uberedux } from "../ui/Uberedux";
-import StyledComponentsRegistry from "./StyledComponentsRegistry";
-import MuiProvider from "./MuiProvider"; // Import the new wrapper
+import StyledComponentsRegistry from "./theme/StyledComponentsRegistry";
+import MuiProvider from "./theme/MuiProvider";
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+  src: "./theme/fonts/GeistVF.woff",
   variable: "--font-geist-sans",
 });
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+  src: "./theme/fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
 });
 

@@ -3,7 +3,7 @@ import React from "react";
 import {
   Card,
   CardHeader,
-  CardContent,
+  // CardContent,
   CardMedia,
 } from "@mui/material";
 import Icon from "../Icon/Icon";
@@ -26,15 +26,24 @@ export default function Hero({
             title={title}
             subheader={subheader}
             avatar={<Icon icon={icon} />}
+            
           />
           <CardMedia
             component={"img"}
-            height={250}
-            src={ imageSrc  }
+            height={225}
+            src={imageSrc}
+            alt={`${title} ${subheader}`}
           />
-            
-          
         </Card>
   );
 };
 
+/*
+<a 
+  href="https://github.com/javascript-pro/dub-dub-dub"
+  className={`${styles.button} ${styles.secondary}`}
+  target="_blank"
+  rel="noopener noreferrer">
+  Get the code
+</a>
+*/

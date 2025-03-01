@@ -1,8 +1,7 @@
 "use client";
 import React, { ReactNode } from "react";
 import chapterList from "../../ui/Uberedux/data/chapters.json"
-import styles from "../../app/page.module.css";
-
+import styles from "../../app/theme/page.module.css";
 
 export default function Chapters({ children }: { 
   children?: ReactNode | null,
