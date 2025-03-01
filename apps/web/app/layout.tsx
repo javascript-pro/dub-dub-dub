@@ -4,7 +4,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 import { Uberedux } from "../ui/Uberedux";
-import MuiProvider from "./MuiProvider";
+import StyledComponentsRegistry from "./StyledComponentsRegistry";
+import MuiProvider from "./MuiProvider"; // Import the new wrapper
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -20,9 +21,7 @@ export const metadata: Metadata = {
   description: "Goldlabel Instructions",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
@@ -43,9 +42,11 @@ export default function RootLayout({
         <meta property="twitter:description" content={config.description} />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <MuiProvider>
-          <Uberedux>{children}</Uberedux>
-        </MuiProvider>
+        <StyledComponentsRegistry>
+          <MuiProvider> {/* 👈 ThemeProvider is now inside this Client Component */}
+            <Uberedux>{children}</Uberedux>
+          </MuiProvider>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
