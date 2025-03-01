@@ -25,7 +25,7 @@ export default function ItemCard({
           <CardHeader 
             title={title}
             subheader={subheader}
-            avatar={<Icon icon={icon} />}
+            avatar={<Icon icon={icon} color="primary"/>}
             
           />
           <CardMedia

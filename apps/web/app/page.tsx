@@ -25,24 +25,13 @@ export default function Home() {
             </Link>
           </nav>
         </header>
-      
         <main className={styles.main}>
             <Hero 
               icon="share"
               title="Open Source Code"
               subheader="Get it on GitHub"
-              imageSrc="/jpg/classroom.jpg"
+              imageSrc="/jpg/opengraph.jpg"
             />
-            {chapterList.map((item, i) => {
-              const {icon, title, subheader, slug} = item;
-              return <ItemCard 
-                        icon={icon}
-                        slug={slug}
-                        title={title}
-                        subheader={subheader}
-                        key={`item_${i}`}
-                      />
-            })}
         </main>
         <footer className={styles.footer}>
           <small>Goldlabel</small>
