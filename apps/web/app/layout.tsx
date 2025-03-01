@@ -2,8 +2,7 @@ import config from "../config.json";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./theme/globals.css";
-
-import { Uberedux } from "../ui/Uberedux";
+import Uberedux from "@repo/ui/Uberedux/Uberedux";
 import StyledComponentsRegistry from "./theme/StyledComponentsRegistry";
 import MuiProvider from "./theme/MuiProvider";
 
@@ -18,7 +17,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Dub Dub Dub",
-  description: "Goldlabel Instructions",
+  description: "Goldlabel Monorepo",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -27,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/svg/favicon.svg" type="image/x-icon" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/png/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/png/iOS.png" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <meta name="theme-color" content={config.themeColor} />
@@ -43,7 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <StyledComponentsRegistry>
-          <MuiProvider> {/* 👈 ThemeProvider is now inside this Client Component */}
+          <MuiProvider>
             <Uberedux>{children}</Uberedux>
           </MuiProvider>
         </StyledComponentsRegistry>

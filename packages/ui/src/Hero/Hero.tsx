@@ -8,10 +8,10 @@ import {
 } from "@mui/material";
 import Icon from "../Icon/Icon";
 
-export default function Hero({ 
-  icon = "home" ,
-  title = "Hero Title",
-  subheader = "Hero Subheader",
+export default function ItemCard({ 
+  icon = "item" ,
+  title = "ItemCard Title",
+  subheader = "ItemCard Subheader",
   imageSrc = "/jpg/opengraph.jpg",
 }: { 
   icon: string,
@@ -37,13 +37,3 @@ export default function Hero({
         </Card>
   );
 };
-
-/*
-<a 
-  href="https://github.com/javascript-pro/dub-dub-dub"
-  className={`${styles.button} ${styles.secondary}`}
-  target="_blank"
-  rel="noopener noreferrer">
-  Get the code
-</a>
-*/
