@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import Icon from "../Icon/Icon";
 
-export default function ItemCard({ 
+export default function Hero({ 
   icon = "item" ,
   title = "ItemCard Title",
   subheader = "ItemCard Subheader",

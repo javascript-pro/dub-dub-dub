@@ -6,19 +6,20 @@ import Uberedux from "@repo/ui/Uberedux/Uberedux";
 import StyledComponentsRegistry from "./theme/StyledComponentsRegistry";
 import MuiProvider from "./theme/MuiProvider";
 
-const geistSans = localFont({
-  src: "./theme/fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-});
-const geistMono = localFont({
-  src: "./theme/fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-});
-
 export const metadata: Metadata = {
   title: "Dub Dub Dub",
   description: "Goldlabel Monorepo",
 };
+
+const geistSans = localFont({
+  src: "./theme/fonts/GeistVF.woff",
+  variable: "--font-geist-sans",
+});
+
+const geistMono = localFont({
+  src: "./theme/fonts/GeistMonoVF.woff",
+  variable: "--font-geist-mono",
+});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
