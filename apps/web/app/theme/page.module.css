@@ -1,10 +1,7 @@
-/* Full Page Layout */
-.page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  font-family: var(--font-family);
+.main {
+  max-width: 1024px;
+  margin: 0 auto; /* Centers the content */
+  padding: 0 16px; /* Adds some spacing on smaller screens */
 }
 
 /* Container */
@@ -23,6 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-align: left; /* Align header text to the left */
 }
 
 /* Dark Mode Adjustments */
@@ -54,6 +52,7 @@
 .logo {
   display: flex;
   align-items: center;
+  text-align: left;
 }
 
 /* Navigation */
@@ -71,12 +70,9 @@
 
 /* Hero Section */
 .hero {
-  text-align: center;
+  text-align: left; /* Align hero section text to the left */
   margin: 10px;
   padding: 10px;
-  /* background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.25); */
-  /* border: 1px solid #C09F52; */
   color: white; /* Ensures good contrast */
   border-radius: 8px;
 }
@@ -84,9 +80,8 @@
 /* Call to Action */
 .cta {
   display: flex;
-  /* gap: 10px; */
-  justify-content: center;
-  /* margin-top: 2rem; */
+  justify-content: flex-end;
+  margin-top: 25px;
 }
 
 /* Feature Grid */
@@ -119,7 +114,7 @@
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  text-align: left; /* Align text inside feature boxes to the left */
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
@@ -132,7 +127,7 @@
 /* Footer */
 .footer {
   width: 100%;
-  text-align: center;
+  text-align: center; /* Align footer text to the left */
   padding: 20px;
   background: var(--footer-background);
   margin-top: auto;
@@ -144,7 +139,7 @@
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: bold;
-  text-align: center;
+  text-align: left; /* Align button text to the left */
   text-decoration: none;
   border-radius: 5px;
   transition: background 0.3s ease, transform 0.2s ease;
