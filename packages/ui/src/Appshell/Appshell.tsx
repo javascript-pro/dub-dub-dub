@@ -31,14 +31,14 @@ export interface IChapter {
 const chapters: readonly IChapter[] = [
     {
         "icon": "doc",
-        "avatar": "/svg/guest.svg",
+        "avatar": "/svg/characters/mumma.svg",
         "title": "Chapter 1.",
         "subheader": "Introduction",
         "slug": "/introduction",
         "outline": "What is a monorepo, and why use one? Overview of the Goldlabel software stack Benefits of SSR in Next.js for PWAs Why a common UI package is essential"
     },
     {
-      "avatar": "/svg/guest.svg",
+      "avatar": "/svg/characters/chix.svg",
         "icon": "right",
         "title": "Chapter 2.",
         "subheader": "Setting Up the Monorepo",
@@ -46,7 +46,7 @@ const chapters: readonly IChapter[] = [
         "outline": "Installing a Next.js-based monorepo with Turborepo Structuring the /apps and /packages folders Adding dependencies and configurations"
     },
     {
-      "avatar": "/svg/guest.svg",
+      "avatar": "/svg/characters/biker.svg",
       "icon": "right",
         "title": "Chapter 3.",
         "subheader": "Implementing Server-Side Rendering (SSR)",
@@ -55,7 +55,7 @@ const chapters: readonly IChapter[] = [
     },
     {
         "icon": "right",
-        "avatar": "/svg/guest.svg",
+        "avatar": "/svg/characters/dapper.svg",
         "title": "Chapter 4.",
         "subheader": "Creating a PWA with Next.js",
         "slug": "/creating-a-pwa",
@@ -63,7 +63,7 @@ const chapters: readonly IChapter[] = [
     },
     {
         "icon": "right",
-        "avatar": "/svg/guest.svg",
+        "avatar": "/svg/characters/hippy.svg",
         "title": "Chapter 5.",
         "subheader": "Building a Common UI Package",
         "slug": "/building-a-common-ui-package",
@@ -71,7 +71,7 @@ const chapters: readonly IChapter[] = [
     },
     {
         "icon": "right",
-        "avatar": "/svg/guest.svg",
+        "avatar": "/svg/characters/punk.svg",
         "title": "Chapter 6.",
         "subheader": "Integrating the Common UI Across Apps",
         "slug": "/integrating-the-common-ui",
@@ -79,7 +79,7 @@ const chapters: readonly IChapter[] = [
     },
     {
         "icon": "right",
-        "avatar": "/svg/guest.svg",
+        "avatar": "/svg/characters/rasta.svg",
         "title": "Chapter 7.",
         "subheader": "Deployment and Optimization",
         "slug": "/deployment-and-optimization",
@@ -87,7 +87,7 @@ const chapters: readonly IChapter[] = [
     },
     {
         "icon": "right",
-        "avatar": "/svg/guest.svg",
+        "avatar": "/svg/characters/rocker.svg",
         "title": "Chapter 8.",
         "subheader": "Advanced Topics & Future Enhancements",
         "slug": "/advanced-topics",
@@ -131,7 +131,7 @@ export default function Appshell() {
                   aria-label="menu"
                   sx={{ mr: 2 }}
                 >
-                  <Icon icon="menu" />
+                  <Icon icon="goldlabel" />
                 </IconButton>
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                  {title}
@@ -147,7 +147,8 @@ export default function Appshell() {
                 </IconButton>
               </Toolbar>
             </AppBar>
-            <List>
+            
+            <List sx={{mx:2}}>
               {chapters.map(({ 
                 avatar, 
                 title, 
@@ -165,13 +166,13 @@ export default function Appshell() {
                           <Avatar alt={title} src={avatar} />
                         </ListItemAvatar>
                         <ListItemText 
-                          primary={title} 
-                          secondary={subheader} 
+                          primary={subheader} 
+                          // secondary={subheader} 
                         />
                       </ListItemButton>
               })}
             </List>
-            <Paper sx={{ 
+            <Box sx={{ 
               position: 'fixed', 
               borderRadius: 0,
               boxShadow: 0,
@@ -179,10 +180,10 @@ export default function Appshell() {
               left: 0, 
               right: 0,
               zIndex: 120,
-            }} elevation={3}>
+            }} >
               <BottomNavigation
                 showLabels
-                value={0}
+                value={1}
                 onChange={(
                   // event, 
                   // newValue,
@@ -190,16 +191,15 @@ export default function Appshell() {
                   // setValue(newValue);
                 }}>
                 <BottomNavigationAction label="Back" 
-                  icon={<Icon icon="left" />} />
+                  icon={<Icon icon="left"/>} />
 
                 <BottomNavigationAction label="New" 
                   icon={<Icon icon="add"/>} />
 
                 <BottomNavigationAction label="Forward" 
                   icon={<Icon icon="right"/>} />
-
               </BottomNavigation>
-            </Paper>
+            </Box>
           </Box>
         </>
 };

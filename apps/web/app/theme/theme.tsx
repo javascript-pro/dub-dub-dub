@@ -12,7 +12,7 @@ const theme = createTheme({
       main: deepPurple[500],
     },
     background: {
-      default: grey[100],
+      default: "#ffffff",
       paper: "#ffffff",
     },
     text: {

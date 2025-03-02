@@ -1,24 +1,27 @@
+/* body {
+  display: none;
+} */
 body {
   font-family: 'Geist', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* h1, h2, h3, h4, h5, h6 {
   margin-top: 16px;
   margin-bottom: 16px;
   font-weight: normal;
-}
+} */
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 html,
 body {
@@ -26,10 +29,10 @@ body {
   overflow-x: hidden;
 }
 
-body {
+/* body {
   color: var(--foreground);
   background: var(--background);
-}
+} */
 
 * {
   box-sizing: border-box;
@@ -46,7 +49,7 @@ a {
   display: none;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -57,4 +60,4 @@ a {
   .imgDark {
     display: unset;
   }
-}
+} */
