@@ -1,5 +1,6 @@
 "use client";
 import React, { ReactNode } from "react";
+import config from "../../../../apps/web/config.json";
 import {
   BottomNavigationAction,
   Box,
@@ -11,6 +12,11 @@ import {
   ListItemText,
   Paper,
   BottomNavigation,
+  Button,
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
 } from "@mui/material";
 // import Grid from '@mui/material/Grid2';
 import Icon from "../Icon/Icon";
@@ -70,9 +76,50 @@ export default function Appshell({
   children?: ReactNode
 }) {
 
+  // console.log ("config", config)
+  const {title} = config;
   return <>
-          <Box sx={{ pb: 7 }}>
-            <CssBaseline />
+          <CssBaseline />
+          <Box sx={{ py: 11 }}>
+            
+            <AppBar 
+              position="static" 
+              color="default"
+              sx={{ 
+                background: "white",
+                borderRadius: 0,
+                boxShadow: 0,
+                position: 'fixed', 
+                top: 0, 
+                left: 0, 
+                right: 0,
+                zIndex: 100,
+              }}>
+
+              <Toolbar>
+                <IconButton
+                  edge="start"
+                  color="inherit"
+                  aria-label="menu"
+                  sx={{ mr: 2 }}
+                >
+                  <Icon icon="menu" />
+                </IconButton>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                 {title}
+                </Typography>
+
+                <IconButton
+                  edge="end"
+                  color="inherit"
+                  aria-label="menu"
+                  sx={{ mr: 2 }}
+                >
+                  <Icon icon="users" />
+                </IconButton>
+              </Toolbar>
+            </AppBar>
+
             <List>
               {messageExamples.map(({ primary, secondary, person }, index) => (
                 <ListItemButton key={index + person}>
@@ -83,13 +130,25 @@ export default function Appshell({
                 </ListItemButton>
               ))}
             </List>
+
             <Paper sx={{ 
               position: 'fixed', 
+              borderRadius: 0,
+              boxShadow: 0,
               bottom: 0, 
               left: 0, 
               right: 0,
+              zIndex: 120,
             }} elevation={3}>
-            
+            {/* sx={{ 
+                background: "white",
+                
+                position: 'fixed', 
+                top: 0, 
+                left: 0, 
+                right: 0,
+                
+              }} */}
               <BottomNavigation
                 showLabels
                 value={0}
@@ -106,6 +165,8 @@ export default function Appshell({
                   icon={<Icon icon="right"/>} />
 
               </BottomNavigation>
+
+              
             </Paper>
           </Box>
         </>
