@@ -1,5 +1,5 @@
 "use client";
-import React, { ReactNode } from "react";
+import React from "react";
 import config from "../../../../apps/web/config.json";
 import {
   BottomNavigationAction,
@@ -12,13 +12,11 @@ import {
   ListItemText,
   Paper,
   BottomNavigation,
-  Button,
   AppBar,
   Toolbar,
   IconButton,
   Typography,
 } from "@mui/material";
-// import Grid from '@mui/material/Grid2';
 import Icon from "../Icon/Icon";
 
 export interface IChapter {
@@ -98,11 +96,7 @@ const chapters: readonly IChapter[] = [
 ];
 
 
-export default function Appshell({ 
-  children = "home",
-}: { 
-  children?: ReactNode
-}) {
+export default function Appshell() {
 
   // console.log ("config", config)
   const {title} = config;
@@ -153,7 +147,6 @@ export default function Appshell({
                 </IconButton>
               </Toolbar>
             </AppBar>
-
             <List>
               {chapters.map(({ 
                 avatar, 
@@ -178,7 +171,6 @@ export default function Appshell({
                       </ListItemButton>
               })}
             </List>
-
             <Paper sx={{ 
               position: 'fixed', 
               borderRadius: 0,
@@ -188,19 +180,13 @@ export default function Appshell({
               right: 0,
               zIndex: 120,
             }} elevation={3}>
-            {/* sx={{ 
-                background: "white",
-                
-                position: 'fixed', 
-                top: 0, 
-                left: 0, 
-                right: 0,
-                
-              }} */}
               <BottomNavigation
                 showLabels
                 value={0}
-                onChange={(event, newValue) => {
+                onChange={(
+                  // event, 
+                  // newValue,
+                ) => {
                   // setValue(newValue);
                 }}>
                 <BottomNavigationAction label="Back" 
@@ -213,8 +199,6 @@ export default function Appshell({
                   icon={<Icon icon="right"/>} />
 
               </BottomNavigation>
-
-              
             </Paper>
           </Box>
         </>
