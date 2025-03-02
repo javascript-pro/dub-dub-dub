@@ -10,7 +10,6 @@ import {
   Avatar,
   ListItemAvatar,
   ListItemText,
-  Paper,
   BottomNavigation,
   AppBar,
   Toolbar,
@@ -126,24 +125,25 @@ export default function Appshell() {
 
               <Toolbar>
                 <IconButton
+                  onClick={() => {
+                    onChapterClick("/" as string);
+                  }}
                   edge="start"
                   color="inherit"
                   aria-label="menu"
                   sx={{ mr: 2 }}
                 >
-                  <Icon icon="goldlabel" />
+                  <Avatar alt={title} src={"/svg/favicon.svg"} />
                 </IconButton>
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                  {title}
                 </Typography>
-
                 <IconButton
                   edge="end"
                   color="inherit"
                   aria-label="menu"
-                  sx={{ mr: 2 }}
-                >
-                  <Icon icon="users" />
+                  sx={{ mr: 2 }}>
+                  <Icon icon="menu" />
                 </IconButton>
               </Toolbar>
             </AppBar>
