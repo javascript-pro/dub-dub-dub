@@ -20,8 +20,9 @@ const theme = createTheme({
       secondary: grey[700],
     },
   },
+  
   typography: {
-    fontFamily: `"Geist Sans", "Geist Mono", "Arial", sans-serif`,
+    fontFamily: "'Inter', sans-serif",
     h1: {
       fontSize: "2rem",
       fontWeight: 700,
@@ -38,34 +39,9 @@ const theme = createTheme({
       fontSize: "1rem",
     },
     button: {
-      textTransform: "none", // Prevents uppercase buttons
+      textTransform: "none",
     },
-  },
-  components: {
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          borderRadius: 8,
-          fontWeight: "bold",
-        },
-      },
-    },
-    MuiPaper: {
-      styleOverrides: {
-        root: {
-          padding: "16px",
-          borderRadius: "12px",
-        },
-      },
-    },
-    MuiCard: {
-      styleOverrides: {
-        root: {
-          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-        },
-      },
-    },
-  },
+  }
 });
 
 export default responsiveFontSizes(theme);

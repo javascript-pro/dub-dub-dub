@@ -1,7 +1,5 @@
 import config from "../config.json";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./theme/globals.css";
 import Uberedux from "@repo/ui/Uberedux/Uberedux";
 import StyledComponentsRegistry from "./theme/StyledComponentsRegistry";
 import MuiProvider from "./theme/MuiProvider";
@@ -10,16 +8,6 @@ export const metadata: Metadata = {
   title: "Dub Dub Dub",
   description: "Goldlabel Monorepo",
 };
-
-const geistSans = localFont({
-  src: "./theme/fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-});
-
-const geistMono = localFont({
-  src: "./theme/fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -41,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property="twitter:title" content={config.title} />
         <meta property="twitter:description" content={config.description} />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body>
         <StyledComponentsRegistry>
           <MuiProvider>
             <Uberedux>{children}</Uberedux>
