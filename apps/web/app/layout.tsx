@@ -1,15 +1,19 @@
+"use server";
+
 import config from "../config.json";
 import type { Metadata } from "next";
 import Uberedux from "@repo/ui/Uberedux/Uberedux";
 import StyledComponentsRegistry from "./theme/StyledComponentsRegistry";
 import MuiProvider from "./theme/MuiProvider";
 
-export const metadata: Metadata = {
-  title: "Dub Dub Dub",
-  description: "Goldlabel Monorepo",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Dub Dub Dub",
+    description: "Goldlabel Monorepo",
+  };
+}
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
@@ -30,11 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property="twitter:description" content={config.description} />
       </head>
       <body>
-        <StyledComponentsRegistry>
-          <MuiProvider>
-            <Uberedux>{children}</Uberedux>
-          </MuiProvider>
-        </StyledComponentsRegistry>
+        <MuiProvider>{children}</MuiProvider>
       </body>
     </html>
   );
