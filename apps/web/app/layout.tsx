@@ -2,9 +2,9 @@
 
 import config from "../config.json";
 import type { Metadata } from "next";
-import Uberedux from "@repo/ui/Uberedux/Uberedux";
-import StyledComponentsRegistry from "./theme/StyledComponentsRegistry";
-import MuiProvider from "./theme/MuiProvider";
+// import Uberedux from "@repo/ui/Uberedux/Uberedux";
+// import StyledComponentsRegistry from "./theme/StyledComponentsRegistry";
+// import MuiProvider from "./theme/MuiProvider";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -34,7 +34,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <meta property="twitter:description" content={config.description} />
       </head>
       <body>
-        <MuiProvider>{children}</MuiProvider>
+        {children}
       </body>
     </html>
   );
